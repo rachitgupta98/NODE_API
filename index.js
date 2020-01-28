@@ -7,13 +7,10 @@ const PORT = 5000;
 //setup mongoose
 mongoose.Promise = global.Promise;
 mongoose
-  .connect(
-    "mongodb+srv://<username></username>:<password>@api-cluster-jziuo.mongodb.net/test?retryWrites=true&w=majority",
-    {
-      useNewUrlParser: true,
-      useUnifiedTopology: true
-    }
-  )
+  .connect("<connection string>", {
+    useNewUrlParser: true,
+    useUnifiedTopology: true
+  })
   .then(
     () => {
       console.log("Database connection established!");
